@@ -1,2 +1,1 @@
-[include]
-taraplotlib/assets/*.svg
+include taraplotlib/assets/*.svg

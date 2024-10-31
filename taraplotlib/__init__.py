@@ -54,3 +54,4 @@ rcParams["font.size"] = 14
 rcParams["axes.labelsize"] = 19
 
 rcParams['figure.autolayout'] = True
+rcParams['image.cmap'] = 'crime-yoga'

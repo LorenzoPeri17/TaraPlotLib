@@ -15,7 +15,7 @@ _marker_svgs = {
 taralib_paths : dict[str, Path] = {}
 for marker_name, marker_svg in _marker_svgs.items():
     # Load the SVG file and convert it to a path
-    paths, _ = svg2paths(filePath(__file__).parent.parent.resolve() / "assets" / marker_svg) # type: ignore
+    paths, _ = svg2paths(filePath(__file__).resolve().parents[1] / "assets" / marker_svg) # type: ignore
     marker_path = parse_path(paths[0].d())
     # Center the paths
     marker_bbox = marker_path.get_extents()

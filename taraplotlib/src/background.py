@@ -6,7 +6,7 @@ from typing import Literal
 from .markers import taralib_paths
 
 def add_background(ax : Axes, 
-                   image : Literal['cat', 'pawprint', 'tecup', 'teabag'], 
+                   image : Literal['cat', 'pawprint', 'teacup', 'teabag'], 
                    loc: tuple[float, float] = (0.975, 0.025), 
                    scale:float = 0.1,
                    horizontalalignment : Literal['left', 'center', 'right'] = 'right',
@@ -15,6 +15,7 @@ def add_background(ax : Axes,
                    facecolor : str = 'none',
                    edgecolor : str = 'TPLBlue',
                    alpha : float = 0.4,
+                   zorder : int = -1,
                    **kwargs
                    ) -> None:
     
@@ -45,6 +46,6 @@ def add_background(ax : Axes,
                               **kwargs)
     
     patch.set_transform(ax.transAxes)
-    patch.zorder = -1
+    patch.zorder = zorder
     
     ax.add_patch(patch)
