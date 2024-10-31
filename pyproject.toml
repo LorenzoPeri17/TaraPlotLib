@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taraplotlib"
+version="0.0.0"
+authors = [
+    {name = "Lorenzo Peri"},
+]
+description = "Cosy matplotlib styles for tea and cat lovers"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+readme = "README.md"
+dependencies = [
+    "matplotlib",
+    "svgpath2mpl",
+    "svgpathtools",
+]
+
+[project.urls]
+Homepage = "https://https://github.com/LorenzoPeri17/TaraPlotLib"
