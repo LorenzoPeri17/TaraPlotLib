@@ -16,6 +16,7 @@ def add_background(ax : Axes,
                    edgecolor : str = 'TPLBlue',
                    alpha : float = 0.4,
                    zorder : int = -1,
+                   keep_aspect : bool = True,
                    **kwargs
                    ) -> None:
     
@@ -25,6 +26,7 @@ def add_background(ax : Axes,
     # paths come centered
     # we need to align them properly
     bbox = path.get_extents()
+    original_aspect = bbox.width / bbox.height
     
     if horizontalalignment == 'left':
         path = path.transformed(Affine2D().translate(+bbox.width/2, 0))
@@ -37,6 +39,18 @@ def add_background(ax : Axes,
         path = path.transformed(Affine2D().translate(0, +bbox.height/2))
     
     path = path.transformed(Affine2D().translate(*loc))
+    
+    ## This is a hack to keep the aspect ratio
+    ## The only way I can think of is to transform the path
+    ## to axes coordinates, get the aspect ratio, and then
+    ## transform it back to figure coordinates
+    
+    if keep_aspect:
+        path = path.transformed(ax.transAxes)
+        trans_bbox = path.get_extents()
+        trans_aspect = trans_bbox.width / trans_bbox.height
+        path = path.transformed(ax.transAxes.inverted())
+        path = path.transformed(Affine2D().scale(1, trans_aspect/original_aspect))
     
     patch = patches.PathPatch(path, 
                               facecolor=facecolor, 
