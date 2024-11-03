@@ -23,6 +23,6 @@ ax.set_ylabel('y-axis')
 
 plt.colorbar(im, ax=ax, label = 'z-axis')
 
-fig.savefig(Path(__file__).with_name( "2d_plot.png"))
+fig.savefig(Path(__file__).with_suffix( ".png"))
 
 plt.show()

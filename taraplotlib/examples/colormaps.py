@@ -33,6 +33,6 @@ for ax, name in zip(axs, cmap_list):
             transform=ax.transAxes)
     ax.set_axis_off()
 
-fig.savefig(Path(__file__).with_name( "colormaps.png"))
+fig.savefig(Path(__file__).with_suffix( ".png"))
 
 plt.show()
