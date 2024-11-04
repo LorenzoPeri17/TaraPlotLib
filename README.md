@@ -15,7 +15,7 @@ fig, ax = plt.subplots()
 ax.plot(x, x)
 ```
 
-![single-line](taraplotlib/examples/single_line.png)
+![single-line](https://github.com/LorenzoPeri17/TaraPlotLib/blob/main/taraplotlib/examples/single_line.png?raw=true)
 
 ... a line of steaming hot teacups appears! And in a nice pastel color, non of that professional-looking default blue!
 
@@ -23,7 +23,7 @@ ax.plot(x, x)
 
 I wonder what happens if I try to plot multiple lines...?
 
-![simple-plot](taraplotlib/examples/simple_plot.png)
+![simple-plot](https://github.com/LorenzoPeri17/TaraPlotLib/blob/main/taraplotlib/examples/simple_plot.png?raw=true)
 > Full example available in `taraplotlib/examples/simple_plot.py`
 
 More pastel colors! And more nice little silhouettes!  And we haven't even mentioned the cat in the background! That's a plot carrying one heck of a cosy vibe, right?
@@ -40,14 +40,14 @@ or your favorite between the available images (`cat`, `teacup`, `teabag`, `pawpr
 
 Ok, now imagine that you have a 2D dataset to plot. Let's see what happens...
 
-![2d_plot](taraplotlib/examples/2d_plot.png)
+![2d_plot](https://github.com/LorenzoPeri17/TaraPlotLib/blob/main/taraplotlib/examples/2d_plot.png?raw=true)
 > Full example available in `taraplotlib/examples/2d_plot.py`
 
 ... what a cosy colormap! None of that harsh purple and yellow in `viridis`.
 
 But... does that mean `tpl` has it's own colormaps? Yes! Here they are in their full glory!
 
-![colormaps](taraplotlib/examples/colormaps.png)
+![colormaps](https://github.com/LorenzoPeri17/TaraPlotLib/blob/main/taraplotlib/examples/colormaps.png?raw=true)
 > Code available in `taraplotlib/examples/colormaps.py`
 
 So, if you are convinced, please don't hesitate to join in the cosy fun of `tpl` with a simple
